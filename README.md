@@ -1,76 +1,78 @@
-# 🐧 Penguin Species Prediction
+# Penguin Species Prediction
 
-A fun and practical machine learning project that predicts **penguin species** based on physical traits like their bill (culmen) size and the island they live on — using the famous **Palmer Penguins dataset**.
+A practical machine learning project that predicts penguin species based on physical traits like culmen (bill) size and the island they live on — using the Palmer Penguins dataset.
 
 ---
 
-## 💡 What This Project Is About
+## What This Project Is About
 This notebook walks through the full machine learning workflow — from exploring the data to building and evaluating predictive models.  
-The goal is to figure out **which features best distinguish penguin species**, and how accurately we can classify them using simple models.
+The goal is to determine which features best distinguish penguin species, and how accurately we can classify them using simple models.
 
-I chose this dataset because it’s cleaner and more interesting than the classic Iris dataset — it’s real-world, slightly messy, and involves adorable penguins.
-
----
-
-## 📥 Data Overview
-We use `palmer_penguins.csv`, which includes:
-- **Quantitative features:** Culmen Length, Culmen Depth, Flipper Length, Body Mass  
-- **Qualitative features:** Island, Sex  
-- **Target variable:** Species  
-
-The data is loaded and visualized using **pandas**, **matplotlib**, and **seaborn** to understand patterns and relationships.
+This dataset was chosen because it’s cleaner and more realistic than the classic Iris dataset — it reflects real-world data while still being easy to visualize and interpret.
 
 ---
 
-## 🔍 What We Found
+## Data Overview
+The project uses `palmer_penguins.csv`, which includes:
+
+- Quantitative features: Culmen Length, Culmen Depth, Flipper Length, Body Mass  
+- Qualitative features: Island, Sex  
+- Target variable: Species  
+
+The data was analyzed using `pandas`, `matplotlib`, and `seaborn` to understand trends and relationships.
+
+---
+
+## Key Findings
 After exploring the dataset:
-- **Culmen Length** and **Culmen Depth** stood out as the most distinct numerical features across species.  
-- **Island** turned out to be a powerful categorical predictor — since certain penguin species only live on specific islands.  
+- Culmen Length and Culmen Depth were the most distinct numerical features between species.  
+- Island was the strongest categorical predictor, as some species are found only on specific islands.  
 
-We confirmed this visually with histograms and scatterplots, showing clear separation between species when plotting these features.
-
----
-
-## ⚙️ Preprocessing
-I wrote a simple `prep_data()` function that:
-- Converts categorical values (like Island) into numeric codes  
-- Drops missing values  
-- Splits the data into predictors (`X`) and target (`y`)
-
-Then, the dataset is split into training (80%) and testing (20%) sets.
+Visualizations like histograms and scatterplots confirmed these relationships clearly.
 
 ---
 
-## 🤖 Modeling
-I tested three supervised learning models from **scikit-learn**:
+## Data Preparation
+A helper function `prep_data()` was created to:
+- Encode categorical values (such as Island) into numerical codes  
+- Drop missing values  
+- Split the data into predictor (`X`) and target (`y`) variables  
 
-1. **Logistic Regression** — fast and interpretable; reached ~97% accuracy.  
-2. **Decision Tree** — learned flexible rules and hit ~99% accuracy.  
-3. **Random Forest** — combined multiple trees for ~99% accuracy and higher robustness.
-
-All models were tuned using **cross-validation** to find the best parameters, such as `C` for Logistic Regression and `max_depth` for tree models.
-
----
-
-## 📈 Results & Insights
-Every model performed extremely well (95–99% accuracy range).  
-However:
-- **Decision Trees** worked best overall — simple, interpretable, and accurate.  
-- **Random Forests** performed similarly but required more computation.  
-- **Logistic Regression** was slightly less accurate but very efficient.  
-
-The main takeaway: **Island**, **Culmen Length**, and **Culmen Depth** are enough to predict penguin species with nearly perfect accuracy.
+The dataset was then divided into:
+- 80% training data  
+- 20% testing data  
 
 ---
 
-## 💭 Reflections
-This project was a fun reminder of how much insight you can get from visualization and careful feature selection — even before touching complex models.
+## Modeling
+Three supervised learning models from `scikit-learn` were tested:
 
-If the “**Penguin Apocalypse**” ever comes, at least this model will know which species we’re dealing with 🧊🐧.
+1. **Logistic Regression** – fast, interpretable, and achieved around 97% accuracy  
+2. **Decision Tree** – flexible, easy to understand, and reached about 99% accuracy  
+3. **Random Forest** – ensemble of trees with similar 99% accuracy and more stability  
+
+Cross-validation was used to tune hyperparameters like `C` for Logistic Regression and `max_depth` for tree models.
 
 ---
 
-## 🧠 Tools & Libraries
+## Results and Insights
+All models performed extremely well, achieving accuracies between 95% and 99%.  
+
+- Decision Trees offered the best balance of performance and interpretability.  
+- Random Forests performed equally well but required more computation.  
+- Logistic Regression was slightly less accurate but efficient and simple.  
+
+In short, Island, Culmen Length, and Culmen Depth were sufficient to classify penguin species with near-perfect accuracy.
+
+---
+
+## Reflection
+This project highlights how effective basic feature selection and visualization can be before moving to complex models.  
+Even with a small dataset, careful exploration and model testing can produce highly accurate results.
+
+---
+
+## Tools and Libraries
 - Python 3  
 - pandas, NumPy  
 - matplotlib, seaborn  
@@ -78,15 +80,15 @@ If the “**Penguin Apocalypse**” ever comes, at least this model will know wh
 
 ---
 
-## ▶️ How to Run
-1. Clone or download the repo.  
+## How to Run
+1. Clone or download this repository.  
 2. Place `palmer_penguins.csv` in the same directory.  
-3. Open `PenguinSpeciesPrediction.ipynb` and run the cells in order.  
+3. Open `PenguinSpeciesPrediction.ipynb` and run all cells in order.  
 
 ---
 
-## 👤 Author
+## Author
 **Andrew Park**  
-Data Analyst | Data Enthusiast  
-📧 andrewpark470@gmail.com  
-📞 818-522-1277
+Data Analyst
+Email: andrewpark470@gmail.com  
+Phone: 818-522-1277
