@@ -79,12 +79,6 @@ Even with a small dataset, careful exploration and model testing can produce hig
 - scikit-learn  
 
 ---
-
-## How to Run
-1. Clone or download this repository.  
-2. Place `palmer_penguins.csv` in the same directory.  
-3. Open `PenguinSpeciesPrediction.ipynb` and run all cells in order.  
-
 ---
 
 ## Author
